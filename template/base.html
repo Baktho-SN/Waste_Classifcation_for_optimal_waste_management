@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang = "en" dir = "ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Waste Classifier</title>
+
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"/>
+
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+    
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      href="{{
+        url_for('static', path='images/icon.png') }}"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{
+        url_for('static', path='css/base.css') }}"/>
+ 
+
+</head>
+    
+
+
+  <body>
+    <section class="sidebar">
+      <div class="nav-header">
+        <p class="logo">Waste Classifier</p>
+        <i class="bx bx-menu btn-menu"></i>
+      </div>
+
+      <ul class="nav-links">
+
+        
+
+        <li>
+          <a href="#">
+            <i class="bx bx-home-alt-2"></i>
+            <span class="title">Home</span>
+          </a>
+          <span class="tooltip">Home</span>
+        </li>
+
+         <li>
+          <form action = "/about" method = "post">
+            <i class="bx bx-user"></i>
+            <li><input type="submit" class="title" value="About us"></li>
+          </form>
+          <span class="tooltip">About us</span>
+         </li>
+
+        
+        <li>
+          <form action = "/classify" method = "post">
+            <i class="bx bx-category-alt"></i>
+            <li><input type="submit" class="title" value="Classifier"></li>
+          </form>
+          <span class="tooltip">Classifier</span>
+
+        </li>
+        <li>
+          <form action = "/describe" method = "post">
+            <i class="bx bx-brain"></i>
+            <li><input type="submit" class="title" value="Describer"></li>
+          </form>
+          <span class="tooltip">Describer</span>
+        </li>
+        
+      </ul>
+
+    </section>
+
+  <section class="home">
+    <section class="page-section text-white mb-0" id="Home">
+
+      <i><h1>Organic Waste</h1></i>
+          <i><p>Biodegradable, Compostable, Nutrient-rich.</p></i>
+     
+    </section>
+
+    <div class="container-fluid d-flex align-items-center">
+
+        <img class="article-pic" src="https://www.tomra.com/-/media/project/tomra/tomra/solutions/waste-and-metal-sorting/photos/applications/organic/organics-small.jpg?h=1463&iar=0&w=2000&hash=CD274B03CE46DBFDBA8863B32C7C3531">
+
+       <p id="organic">
+          Organic waste encompasses biodegradable materials from living organisms, including kitchen scraps, yard debris, and agricultural residues. Its biodegradability makes proper disposal crucial to prevent environmental issues such as pollution and greenhouse gas emissions. Sustainable waste management practices, such as composting and anaerobic digestion, transform organic waste into valuable resources like nutrient-rich compost and biogas. Addressing organic waste aligns with global efforts to combat climate change and promote a circular economy. Regulations, community engagement, and public awareness contribute to fostering responsible organic waste disposal and advancing sustainable practices.
+        </p>
+
+    </div>
+
+    <section class="page-section text-white mb-0" id="wrapper2">
+
+      <i><h1>Recyclable Waste</h1></i>
+          <i><p>Reusable, Reprocessable, Eco-friendly.</p></i>
+     
+    </section>
+
+    <div class="container-fluid d-flex align-items-center">
+
+        <p id="recyclable">
+            Non-biodegradable or recyclable waste consists of materials that do not naturally decompose and can persist in the environment for extended periods. Common examples include plastics, metals, glass, and certain chemicals. The management of non-biodegradable waste is vital for mitigating pollution and conserving resources. Recycling plays a central role in diverting these materials from landfills, reducing energy consumption, and lessening the demand for raw materials. Proper waste disposal methods, such as recycling programs and waste-to-energy processes, contribute to minimizing environmental impacts. Legislative measures, technological innovations, and public education campaigns are essential components in fostering sustainable practices and ensuring the responsible handling of non-biodegradable or recyclable waste.
+        </p>
+
+        <img class="article-pic" src="https://www.nspackaging.com/wp-content/uploads/sites/4/2019/03/shutterstock_1492626947.jpg">
+
+    </div>
+
+ 
+    <section class="page-section text-white mb-0" id="wrapper3">
+
+      <h1><i>What's the need to seperate<br>
+        Organic and Recyclable waste?</i></h1>
+     
+    </section>
+
+    <div class="container-fluid d-flex align-items-center">
+
+        <p id="orgvsrec">
+            Separating organic and recyclable waste is crucial for effective waste management. Organic waste, such as food scraps and yard waste, can be composted to create nutrient-rich soil, supporting sustainable agriculture. On the other hand, recyclable materials like paper, plastics, and metals can be processed and reused, conserving valuable resources and reducing environmental impact. By segregating these two types of waste, we streamline recycling efforts, promote resource conservation, and contribute to a cleaner, more sustainable environment.
+            <br><br>
+            <b>Thus we have created a model that takes in images of a waste and classifies it as either organic or recyclable!</b>
+        </p>
+
+
+   </div>
+
+
+    <div class="container">
+      <form action = "/classify" method = "post">     
+        <input type="submit" id="submit1" class="btn" value="Classifier->">  
+      </form>
+    </div>
+
+
+
+  <footer class="footer text-center" id="footer">
+
+    <div class="container-fluid d-flex align-items-center">
+
+      <div class="column">
+        <div class="footer-col col-md-10">
+
+          <h3>Contributions!</h3>
+          <hr style="width:100%" color=black>
+          <ul>
+            <li>Bakthojithan.S.N</li>
+            <li>Bala kannan</li>
+            <li>Santhosh Raymond</li>
+          </ul>
+
+          </div>
+        </div>
+
+
+      <div class="column">
+        <div class="footer-col col-md-10">
+
+          <h3>Take a look!</h3>
+          <div class="contact">
+            
+            <a
+              target="_blank"
+              href="https://github.com/Baktho-SN"
+            >
+            <i class="fab fa-github fa-lg contact-icon"></i>
+            </a>
+
+            <a 
+              target="_blank" 
+              href="https://www.linkedin.com/in/baktho-s-n-435742234/"
+            >
+            <i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+
+          </div>
+          <hr style="width:50%" color=black>
+
+          <p class="footer-description">Follow for more projects like these! ;)</p>
+
+        </div>
+      </div>
+      
+      </div>
+
+  
+
+    </footer> 
+  </section>
+
+    <script>
+      const btn_menu = document.querySelector(".btn-menu");
+      const side_bar = document.querySelector(".sidebar");
+
+      btn_menu.addEventListener("click", function () {
+        side_bar.classList.toggle("expand");
+        changebtn();
+      });
+
+      function changebtn() {
+        if (side_bar.classList.contains("expand")) {
+          btn_menu.classList.replace("bx-menu", "bx-menu-alt-right");
+        } else {
+          btn_menu.classList.replace("bx-menu-alt-right", "bx-menu");
+        }
+      }
+    </script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+  </body>
+</html>
