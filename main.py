@@ -176,13 +176,10 @@ import google.generativeai as genai # our describer AI
 
 from IPython.display import Image as IPImage # to convert image into ipython format
 
-import vertexai
-from vertexai.preview.generative_models import GenerativeModel, Image # google's genai
-
 
 def Describe_image(img):
     
-    genai.configure(api_key=os.environ.get('GOOGLE_API_KEY')) 
+    genai.configure(api_key="AIzaSyB1WM24l5RrLZkm9zh8Xm158-p472Np89c") 
     model = genai.GenerativeModel(model_name = 'gemini-pro-vision',
                                  safety_settings = None,
                                  generation_config = None

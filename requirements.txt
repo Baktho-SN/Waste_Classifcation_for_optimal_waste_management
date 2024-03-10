@@ -21,4 +21,5 @@ utils
 google-generativeai
 IPython
 google-cloud-aiplatform
-os
+opencv-python-headless
+opencv-contrib-python
