@@ -21,4 +21,3 @@ utils
 google-generativeai
 IPython
 google-cloud-aiplatform
-os
