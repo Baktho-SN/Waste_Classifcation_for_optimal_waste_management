@@ -1,7 +1,7 @@
 import joblib # for loading model pickle file
 import numpy as np # for array conversion
 from PIL import Image as PILImage # for converting an image to pil image format
-import cv2 # for image configuration
+from cv2 import * # for image configuration
 
 
 from fastapi import FastAPI, File, UploadFile, Request
