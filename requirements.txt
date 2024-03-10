@@ -22,3 +22,5 @@ google-generativeai
 IPython
 google-cloud-aiplatform
 opencv-python-headless
+opencv-contrib-python
+cv2
