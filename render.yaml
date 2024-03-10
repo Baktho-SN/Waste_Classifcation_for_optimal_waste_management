@@ -1,0 +1,12 @@
+services:
+  # A Docker web service
+  - type: web
+    runtime: docker
+    rootDir: webdis
+    buildCommand: "docker build -t $RENDER_APP_NAME ."
+    startCommand: "docker run -p 80:$PORT -e PORT=$PORT $RENDER_APP_NAME"
+    env:
+      - key: RENDER_APP_NAME
+        value: "Waste Classifier"
+      - key: GOOGLE_API_KEY
+        sync: false
