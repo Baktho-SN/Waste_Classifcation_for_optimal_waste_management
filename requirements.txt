@@ -23,6 +23,6 @@ IPython
 google-cloud-aiplatform
 opencv-python-headless
 opencv-contrib-python
-tensorflow==2.13.0
+tensorflow==2.14.0
 keras==3.0.1
 
