@@ -21,10 +21,7 @@ app.mount("/static",StaticFiles(directory="static"),name="static")
 
 
 # loading the saved model
-with open('C:/Users/aa641/Projects/Waste_Classification/model/wc_vgg19_model_tl.json', 'r') as json_file:
-    loaded_model_json = json_file.read()
-model = tf.keras.models.model_from_json(loaded_model_json)
-model.load_weights('C:/Users/aa641/Projects/Waste_Classification/model/wc_vgg19_model_tl.weights.h5')
+model = tf.keras.models.load_model("model/wc_vgg19_model_tl.keras")
 
 # sets the templates folder for the app
 templates = Jinja2Templates(directory="template")
