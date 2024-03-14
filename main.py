@@ -21,7 +21,7 @@ app.mount("/static",StaticFiles(directory="static"),name="static")
 
 
 # loading the saved model
-model = tf.keras.models.load_model("model/wc_vgg19_model_tl.keras")
+model = tf.keras.models.load_model("model/n_wc_model.keras")
 
 # sets the templates folder for the app
 templates = Jinja2Templates(directory="template")
