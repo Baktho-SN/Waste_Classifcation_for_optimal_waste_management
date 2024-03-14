@@ -1,0 +1,33 @@
+numpy
+joblib
+fastapi
+jinja2
+python-multipart
+uvicorn
+aiofiles
+jupyterlab
+matplotlib
+scikit-learn
+scikit-plot
+scipy
+seaborn
+yellowbrick
+opencv-python
+pillow
+Python-IO
+pandas
+python-utils
+utils
+google-generativeai
+IPython
+google-cloud-aiplatform
+opencv-python-headless
+opencv-contrib-python
+<<<<<<< HEAD
+tensorflow==2.16.1
+keras==3.0.5
+=======
+tensorflow==2.2.0
+keras==2.3.1
+
+>>>>>>> 9530a310d6d05dc792426ef86b7e1e69bdc6b455
