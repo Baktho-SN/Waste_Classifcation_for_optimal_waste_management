@@ -1,16 +1,8 @@
-<<<<<<< HEAD
 import tensorflow as tf # for loading model 
 import numpy as np # for array conversion
 from PIL import Image as PILImage # for converting an image to pil image format
 import cv2 # for image configuration
 from tensorflow.keras.models import load_model ,Model
-=======
-import joblib # for loading model pickle file
-import numpy as np # for array conversion
-from PIL import Image as PILImage # for converting an image to pil image format
-from cv2 import * # for image configuration
-
->>>>>>> 9530a310d6d05dc792426ef86b7e1e69bdc6b455
 
 from fastapi import FastAPI, File, UploadFile, Request
 # FastAPI is a modern, fast (high-performance), web framework for building APIs with Python
@@ -29,15 +21,10 @@ app.mount("/static",StaticFiles(directory="static"),name="static")
 
 
 # loading the saved model
-<<<<<<< HEAD
 with open('C:/Users/aa641/Projects/Waste_Classification/model/wc_vgg19_model_tl.json', 'r') as json_file:
     loaded_model_json = json_file.read()
 model = tf.keras.models.model_from_json(loaded_model_json)
 model.load_weights('C:/Users/aa641/Projects/Waste_Classification/model/wc_vgg19_model_tl.weights.h5')
-=======
-model = joblib.load(open("model/wc_vgg19_model_tl.pkl", "rb"))
-
->>>>>>> 9530a310d6d05dc792426ef86b7e1e69bdc6b455
 
 # sets the templates folder for the app
 templates = Jinja2Templates(directory="template")
@@ -157,7 +144,6 @@ async def upload(request: Request, file: UploadFile = File(...)):
     - TemplateResponse: render `classifier.html`
     """
 
-<<<<<<< HEAD
 
     contents = await file.read()                       # Read the contents of the uploaded file
     nparr = np.frombuffer(contents, np.uint8)
@@ -172,23 +158,6 @@ async def upload(request: Request, file: UploadFile = File(...)):
         else "The waste in the image is -> Organic"
     )
    
-=======
-    try:
-        contents = await file.read()                       # Read the contents of the uploaded file
-        nparr = np.frombuffer(contents, np.uint8)
-        img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)        # Decode the image
-
-        img = cv2.resize(img, (224, 224))
-        img = np.reshape(img, [-1, 224, 224,3])            # resizes it to fit the input layer of our classifier model
-        result = model.predict(img)                        # and predicts using the model
-        response = (
-            "The waste in the image is -> Recyclable"
-            if result > 0.5
-            else "The waste in the image is -> Organic"
-        )
-    except:
-        response = "wrong image file format"
->>>>>>> 9530a310d6d05dc792426ef86b7e1e69bdc6b455
     
 
     return templates.TemplateResponse(
