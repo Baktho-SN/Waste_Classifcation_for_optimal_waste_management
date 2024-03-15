@@ -29,6 +29,10 @@ The data contains the following columns:
 | Recyclable                 | Images of Recyclable Waste(paper, plastic, etc.)                                                    |
 
 
+## Site Link:
+
+https://waste-classifcation-for-optimal-waste.onrender.com/
+
 ## Installation
 
 Open Anaconda prompt and create new environment
