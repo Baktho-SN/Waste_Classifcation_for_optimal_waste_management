@@ -81,10 +81,10 @@ uvicorn main:app --reload
 ![Classifier](markdown/Classifier.png)
 ![Describer](markdown/Describer.png)
 
-### Classifier Demo
+## Classifier Demo
 
 ![Classifier Demo.GIF](markdown/DEMO.webp)
 
-### Describer Demo
+## Describer Demo
 
 ![Describer Demo.GIF](markdown/DEMO1.webp)
