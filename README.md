@@ -77,6 +77,9 @@ uvicorn main:app --reload
 
 ![app interface](markdown/Homepage1.png)
 ![app interface](markdown/Homepage2.png)
+![app interface](markdown/Homepage3.png)
+![app interface](markdown/Classifier.png)
+![app interface](markdown/Describer.png)
 
 ### Demo
 
