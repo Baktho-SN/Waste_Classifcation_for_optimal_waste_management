@@ -1,7 +1,7 @@
 # Waste-Classifcation-web-app
 Waste Classifier web app is used to predict the type of waste(Organic/Recyclable) from an image. 
-Here a pretrianed model-Vgg19B-is trained and fine-tuned for our classfier.</br> We've added another genai feature, Our Image Describer.
-We integrated and used google's GeminiAI for our describer module. Later we Dockerized the webapp and deployed it using render Cloud.
+Here a pretrianed model-Vgg19B-is trained and fine-tuned for our classifier.</br> We've added another genai feature, Our Image Describer.
+We integrated and used google's GeminiAI for our describer model. Later we Dockerized the webapp and deployed it using render Cloud.
 Created using python's tensorflow, Fastapi, numpy and joblib packages.
 
 ![python 3.11.0](https://img.shields.io/badge/Python-blue.svg)
