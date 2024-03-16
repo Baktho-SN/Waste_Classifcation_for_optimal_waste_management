@@ -75,12 +75,16 @@ uvicorn main:app --reload
 
 ### Website
 
-![app interface](markdown/Homepage1.png)
-![app interface](markdown/Homepage2.png)
-![app interface](markdown/Homepage3.png)
-![app interface](markdown/Classifier.png)
-![app interface](markdown/Describer.png)
+![Homepage1](markdown/Homepage1.png)
+![Homepage2](markdown/Homepage2.png)
+![Homepage3](markdown/Homepage3.png)
+![Classifier](markdown/Classifier.png)
+![Describer](markdown/Describer.png)
 
-### Demo
+### Classifier Demo
 
-![Demo.GIF](markdown/DEMO.webp)
+![Classifier Demo.GIF](markdown/DEMO.webp)
+
+### Describer Demo
+
+![Describer Demo.GIF](markdown/DEMO1.webp)
