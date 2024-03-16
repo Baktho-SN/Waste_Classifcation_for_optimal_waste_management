@@ -184,7 +184,7 @@ def Describe_image(img):
                                  )
 
     pil_img = IPImage(img)
-    response = model.generate_content(["Write a short, engaging blog post based on this picture. It should include a very short description, about 15 words maximum, of the waste in the photo and classify it as either Organic or Recyclable waste.", pil_img], stream=True)
+    response = model.generate_content(["Write a short, engaging blog post based on this picture. It should include a very short description, about 15 words maximum, of the waste in the photo and classify it as either Organic or Recyclable waste.", pil_img], stream=False)
     response.resolve()
     return response.text
     
