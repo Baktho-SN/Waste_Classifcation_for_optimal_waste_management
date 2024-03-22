@@ -1,0 +1,18 @@
+name: Build Docker Image
+
+on:
+  push:
+    branches: [ main ]  # You can adjust the branch to trigger on
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # You can specify a different runner
+
+    steps:
+      - uses: actions/checkout@v3  # Checkout your code from the repository
+
+      - name: Build Docker Image
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}  # Inject secret as environment variable
+        run: |
+          docker build -t waste-classifier . 
