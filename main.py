@@ -178,9 +178,7 @@ from IPython.display import Image as IPImage # to convert image into ipython for
 def Describe_image(img):
     
     genai.configure(api_key=os.environ.get("GOOGLE_API_KEY")) 
-    model = genai.GenerativeModel(model_name = 'gemini-pro-vision',
-                                 safety_settings = None,
-                                 generation_config = None
+    model = genai.GenerativeModel(model_name = 'gemini-pro-vision'
                                  )
 
     pil_img = IPImage(img)
